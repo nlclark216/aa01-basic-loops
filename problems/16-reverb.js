@@ -9,11 +9,27 @@ Vowels are the letters "a", "e", "i", "o", "u".
 
 // Your code here 
 
-// console.log(reverb('running')); // runninging
-// console.log(reverb('FAMILY'));  // FAMILYILY
-// console.log(reverb('trash'));   // trashash
-// console.log(reverb('DISH'));    // DISHISH
-// console.log(reverb(197393));    // null
+let VOWELS = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+function reverb(word) {
+    let newWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        let char = word[i];
+        if (VOWELS.includes(char)) {
+            let lastVowelInd = word.indexOf(char);
+            newWord += word;
+            newWord += word.substr(lastVowelInd);
+            return newWord;
+        }
+    }
+    return null;
+}
+
+console.log(reverb('running')); // runninging
+console.log(reverb('FAMILY'));  // FAMILYILY
+console.log(reverb('trash'));   // trashash
+console.log(reverb('DISH'));    // DISHISH
+console.log(reverb(197393));    // null
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = reverb;

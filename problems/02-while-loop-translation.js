@@ -5,8 +5,8 @@ lowercase (e) and uppercase (E). Your job is to translate the following function
 to use a `while` loop instead of a `for` loop!
 */
 
-function eCounter(word) {
-  let count = 0;
+/* function eCounter(word) {
+   let count = 0;
 
   for (let index = 0; index < word.length; index++) {
     let char = word[index];
@@ -18,6 +18,20 @@ function eCounter(word) {
 
   return count;
 };
+*/
+
+function eCounter(word) {
+  let count = 0;
+  let i = 0;
+  while (i < word.length) {
+    let char = word[i];
+    if (char.toLowerCase() === 'e') {
+      count++;
+    }
+    i++;
+  }
+  return count;
+}
 
 // console.log(eCounter("apple"));      // => 1
 // console.log(eCounter("appleapple")); // => 2

@@ -11,7 +11,13 @@ return anything.
 
 // Your code here 
 
-// logBetweenStepper(5, 9, 1);
+function logBetweenStepper(minNum, maxNum, int) {
+    for (let i = minNum; i <= maxNum; i += int) {
+        console.log(i);
+    }
+}
+
+logBetweenStepper(5, 9, 1);
 /* prints out:
 5
 6

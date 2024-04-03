@@ -6,7 +6,17 @@ number parameter that are multiples of 5.
 
 // Your code here 
 
-// console.log(multiplesOfFive(20)); // => 4    // 0, 5, 10, 15
+function multiplesOfFive(num) {
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        if (i % 5 === 0){
+            count++;
+        }
+    }
+    return count;
+}
+
+ console.log(multiplesOfFive(20)); // => 4    // 0, 5, 10, 15
 // console.log(multiplesOfFive(10)); // => 2    // 0, 5
 // console.log(multiplesOfFive(14)); // => 3    // 0, 5, 10
 // console.log(multiplesOfFive(21)); // => 5    // 0, 5, 10, 15, 20

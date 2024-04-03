@@ -9,7 +9,19 @@ For example, since 64 = 8 * 8 and 144 = 12 * 12, 64 and 144 are perfect squares;
 35 is not a perfect square.
 */
 
-// Your code here 
+
+// Your code here
+
+let SQUARES = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 
+    169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 
+    576, 625, 676, 729, 784, 841, 900, 961]
+
+function isPerfectSquare(num) {
+    if (SQUARES.includes(num)) {
+        return true;
+    }
+    return false;
+}
 
 // console.log(isPerfectSquare(1))     // true
 // console.log(isPerfectSquare(4))     // true

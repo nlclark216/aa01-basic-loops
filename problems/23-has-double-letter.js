@@ -7,6 +7,13 @@ return null.
 
 // Your code here 
 
+function hasDoubleLetter(str) {
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        
+    }
+}
+
 // console.log(hasDoubleLetter('deer')); // true
 // console.log(hasDoubleLetter('boot camp')); // true
 // console.log(hasDoubleLetter('toggle')); // true

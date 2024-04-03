@@ -6,6 +6,14 @@ half of characters in the string parameter.
 
 function firstHalf(str) {
   // Your code here 
+  let newStr = '';
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (str.indexOf(char) < str.length / 2) {
+      newStr += char;
+    }
+  }
+  return newStr;
 }
 
 // console.log(firstHalf('academy')); // 'acad'

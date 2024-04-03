@@ -6,9 +6,17 @@ string in reverse order.
 
 function elementsOfOddIndicesReversed(str) {
   // Your code here 
+  let reverseStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    let char = str[i];
+    if (str.indexOf(char) % 2 !== 0) {
+      reverseStr += char;
+    }
+  }
+  return reverseStr;
 }
 
-// console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'
+console.log(elementsOfOddIndicesReversed('academy')); // 'mdc'
 // console.log(elementsOfOddIndicesReversed('planet'));  // 'tnl'
 // console.log(elementsOfOddIndicesReversed('sport'));   // 'rp'
 

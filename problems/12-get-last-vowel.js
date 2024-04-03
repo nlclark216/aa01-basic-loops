@@ -8,6 +8,17 @@ Vowels are the letters "a", "e", "i", "o", "u".
 
 // Your code here 
 
+let VOWELS = ['a', 'e', 'i', 'o', 'u']
+
+function getLastVowel(str) {
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (VOWELS.includes(str[i])) {
+            return str[i];
+        }
+    }
+    return null;
+}
+
 // console.log(getLastVowel('battery'));      // 'e'
 // console.log(getLastVowel('tunnel'));       // 'e'
 // console.log(getLastVowel('dog'));          // 'o'

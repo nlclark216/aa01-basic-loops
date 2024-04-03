@@ -7,6 +7,9 @@ sequence, we take the sum of the previous two numbers of the sequence.
 
 // Your code here 
 
+function fib(num) {
+}
+
 // console.log(fib(1));    // 1
 // console.log(fib(2));    // 1
 // console.log(fib(3));    // 2
