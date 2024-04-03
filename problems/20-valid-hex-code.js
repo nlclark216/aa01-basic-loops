@@ -9,21 +9,22 @@ All alphabetic characters may be uppercase or lowercase.
 
 // Your code here
 
-let hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C',
-'D', 'E', 'F', '#']
+// 1. code must begin with # and have a length of 7
+// 2. every character must be  valid hex value
+
+let hexValues = "0123456789abcdefABCDEF"
 
 function validHexCode(str) {
-  for (let i = 0; i < str.length; i++) {
+  for (let i = str.length - 1; i > 0; i--) {
     let firstChar = str[0];
-    let position = str.indexOf(i)
+    let char = str[i];
     if (firstChar !== '#' || str.length !== 7) {
       return false;
-    }  else if (firstChar === '#' && str.length === 7) {
-      return true
-    } else if (position > 0 && hexValues.includes(str[i]) !== true) {
-      return false;
+    }  else if (!hexValues.includes(char)) {
+      return false
     }
   }
+  return true;
 }
 
 console.log(validHexCode("#123456"));  // true
