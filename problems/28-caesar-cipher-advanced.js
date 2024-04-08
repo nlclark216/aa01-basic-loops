@@ -6,8 +6,22 @@ shifted num characters in the alphabet.
 Feel free to use this variable: let alphabet = "abcdefghijklmnopqrstuvwxyz";
 */
 
+let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
 function caesarCipher(string, num) {
-    // Your code here 
+    let newArr = [];
+    string = string.split('');
+    for (let i = 0; i < string.length; i++) {
+        let char = string[i];
+       for (let j = 0; j < alphabet.length; j++) {
+        let letter = alphabet[j];
+        let newLetter = alphabet[j + num]
+        if (char === letter) {
+            newArr.push(newLetter);
+        }
+       }
+    } 
+    return newArr.join('')
 }
 
 // console.log(caesarCipher("apple", 1)); // "bqqmf"

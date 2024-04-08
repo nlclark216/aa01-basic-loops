@@ -8,13 +8,29 @@ return null.
 // Your code here 
 
 function hasDoubleLetter(str) {
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i];
-        
+    if (Array.isArray(str) === true) {
+        return null;
+    } else if (typeof str === 'number') {
+        return null;
     }
+
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        let firstChar = str[i];
+        let nextChar = str[i + 1];
+        if (firstChar === nextChar) {
+            count++;
+           
+        }    
+    }
+    if (count > 0) {
+        return true;
+        } else if (count === 0) {
+            return false;
+        }
 }
 
-// console.log(hasDoubleLetter('deer')); // true
+console.log(hasDoubleLetter('deer')); // true
 // console.log(hasDoubleLetter('boot camp')); // true
 // console.log(hasDoubleLetter('toggle')); // true
 // console.log(hasDoubleLetter('taco')); // false

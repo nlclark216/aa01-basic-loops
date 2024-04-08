@@ -8,12 +8,21 @@ sequence, we take the sum of the previous two numbers of the sequence.
 // Your code here 
 
 function fib(num) {
+    if (num === 0) {return []};
+
+    let startArr = [1, 1];
+    for (let i = 2; i < num; i++) {
+        let first = startArr[i - 1]; //first num is num at end of array
+        let second = startArr[i - 2]; //second num is num before num at end of array
+        startArr.push(first + second)
+    }
+    return startArr[startArr.length - 1];
 }
 
-// console.log(fib(1));    // 1
-// console.log(fib(2));    // 1
-// console.log(fib(3));    // 2
-// console.log(fib(4));    // 3
+console.log(fib(1));    // 1
+console.log(fib(2));    // 1
+console.log(fib(3));    // 2
+console.log(fib(4));    // 3
 // console.log(fib(5));    // 5
 // console.log(fib(6));    // 8
 // console.log(fib(10));   // 55
