@@ -18,20 +18,30 @@ to use a `for` loop instead of the `while` loop it is currently using.
 //   return count;
 // };
 
-function aCounter(word) {
+// function aCounter(word) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     let char = word[i];
+//     if (char.toLowerCase() === 'a') {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+function aCounter(word, i = 0) {
   let count = 0;
-  for (let i = 0; i < word.length; i++) {
-    let char = word[i];
-    if (char.toLowerCase() === 'a') {
-      count++;
-    }
+  if (i < word.length) {
+    let res = [word[i] === 'a', word[i] === 'A', aCounter(word, i + 1)];
+    if (res.includes(true)) count++;
+    else return null
   }
-  return count;
+  console.log(count)
 }
 
 // console.log(aCounter("apple"));      // => 1
 // console.log(aCounter("appleapple")); // => 2
-// console.log(aCounter("aAapple"));    // => 3
+console.log(aCounter("aAapple"));    // => 3
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

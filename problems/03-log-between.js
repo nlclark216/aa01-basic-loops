@@ -8,13 +8,22 @@ high numbers.
 
 // Your code here 
 
+// function logBetween(lowNum, highNum) {
+//     for (let i = lowNum; i <= highNum; i++) {
+//         console.log(i);
+//     }
+// }
+
 function logBetween(lowNum, highNum) {
-    for (let i = lowNum; i <= highNum; i++) {
-        console.log(i);
-    }
+   if (highNum < lowNum) {
+    return [];
+   } else {
+    console.log(lowNum)
+    logBetween(lowNum + 1, highNum)
+   }
 }
 
-// logBetween(-1, 2);
+logBetween(-1, 2);
 /* prints out:
 -1
 0
